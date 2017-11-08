@@ -1,0 +1,22 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class BaseClothing : BaseStatItem
+{
+
+	public enum ClothingTypes
+    {
+        HEAD,
+        BODY,
+        NECK,
+        EARRING,
+        RING
+    }
+
+    private ClothingTypes clothingType;
+    private int modifierID;
+
+    public ClothingTypes ClothingType { get; set; }
+    public int ModifierID { get; set; }
+}
