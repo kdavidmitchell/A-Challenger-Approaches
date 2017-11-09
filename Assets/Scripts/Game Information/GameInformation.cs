@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameInformation : MonoBehaviour {
 
+    public static BaseClothing Clothing1 { get; set; } 
     public static string PlayerName { get; set; }
     public static int PlayerLevel { get; set; }
     public static BaseCharacterClass PlayerClass { get; set; }

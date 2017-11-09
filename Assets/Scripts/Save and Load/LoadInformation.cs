@@ -12,5 +12,10 @@ public class LoadInformation
         GameInformation.Rhetoric = PlayerPrefs.GetInt("PLAYER_RHETORIC");
         GameInformation.Image = PlayerPrefs.GetInt("PLAYER_IMAGE");
         GameInformation.Diplomacy = PlayerPrefs.GetInt("PLAYER_DIPLOMACY");
+
+        if (PlayerPrefs.GetString("CLOTHING_1") != null)
+        {
+        	GameInformation.Clothing1 = (BaseClothing)PPSerialization.Load("CLOTHING_1");
+        }
     }
 }
