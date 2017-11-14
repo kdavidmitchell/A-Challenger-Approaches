@@ -16,4 +16,14 @@ public class BaseFood : BaseStatItem
 
     public FoodTypes FoodType { get; set; }
     public int ModifierID { get; set; }
+
+
+    //example constructor
+    public BaseFood()
+    {
+        ItemName = "Food";
+        ItemDescription = "This is some good eats.";
+        ItemID = Random.Range(1, 101);
+        FoodType = FoodTypes.HEALTH;
+    }
 }

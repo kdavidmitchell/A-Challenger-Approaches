@@ -70,6 +70,7 @@ public class CreateNewCharacter : MonoBehaviour
             newPlayer.Rhetoric = newPlayer.PlayerClass.Rhetoric;
             newPlayer.Image = newPlayer.PlayerClass.Image;
             newPlayer.Diplomacy = newPlayer.PlayerClass.Diplomacy;
+            newPlayer.PlayerSkills = newPlayer.PlayerClass.CharacterClassSkills;
 
             StoreNewPlayerInfo();
             SaveInformation.SaveAllInformation();
@@ -80,6 +81,16 @@ public class CreateNewCharacter : MonoBehaviour
             Debug.Log("Player Rhetoric: " + newPlayer.Rhetoric);
             Debug.Log("Player Image: " + newPlayer.Image);
             Debug.Log("Player Diplomacy: " + newPlayer.Diplomacy);
+            
+            foreach (Skill skill in newPlayer.PlayerSkills)
+            {
+                Debug.Log(skill.SkillName);
+                Debug.Log(skill.SkillDescription);
+                Debug.Log(skill.SkillID);
+                Debug.Log(skill.SkillRank);
+                Debug.Log(skill.SkillType);
+                Debug.Log(skill.ExperienceNeededToLevelSkill);
+            } 
         }
     }
 

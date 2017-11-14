@@ -39,4 +39,5 @@ public class CreateNewFood : MonoBehaviour
 			newFood.FoodType = BaseFood.FoodTypes.ENERGY;
 		}
 	}
+
 }

@@ -5,6 +5,9 @@ using UnityEngine;
 public class BaseSophistClass : BaseCharacterClass
 {
 
+    private Skill combatSkill = new Skill();
+    private Skill passiveSkill = new Skill();
+
     public BaseSophistClass()
     {
         CharacterClassName = "Sophist";
@@ -15,6 +18,22 @@ public class BaseSophistClass : BaseCharacterClass
         Rhetoric = 9;
         Diplomacy = 7;
         Image = 8;
+
+        combatSkill.SkillName = "Long-winded Tirade";
+        combatSkill.SkillDescription = "Your skill in filibustering is legend, and almost all of your speeches have been known to put your foes into a deep sleep.";
+        combatSkill.SkillID = 5;
+        combatSkill.SkillRank = 1;
+        combatSkill.SkillType = Skill.SkillTypes.COMBAT;
+        combatSkill.ExperienceNeededToLevelSkill = 10;
+
+        passiveSkill.SkillName = "Questionable Logic";
+        passiveSkill.SkillDescription = "Within a single conversation, you can convince someone that a rectangle has actually been a square this whole time.";
+        passiveSkill.SkillID = 6;
+        passiveSkill.SkillRank = 1;
+        passiveSkill.SkillType = Skill.SkillTypes.PASSIVE;
+        passiveSkill.ExperienceNeededToLevelSkill = 10;
+
+        CharacterClassSkills = new List<Skill> { combatSkill, passiveSkill };
     }
 	
 }

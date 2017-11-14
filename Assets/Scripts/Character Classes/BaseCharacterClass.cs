@@ -13,6 +13,9 @@ public class BaseCharacterClass
     private int rhetoric;
     private int image;
 
+    //Skills
+    private List<Skill> characterClassSkills;
+
     public string CharacterClassName
     {
         get { return characterClassName; }
@@ -41,5 +44,11 @@ public class BaseCharacterClass
     {
         get { return image; }
         set { image = value; }
+    }
+
+    public List<Skill> CharacterClassSkills
+    {
+        get { return characterClassSkills; }
+        set { characterClassSkills = value; }
     }
 }

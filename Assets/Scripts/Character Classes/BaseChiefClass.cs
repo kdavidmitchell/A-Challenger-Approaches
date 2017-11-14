@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BaseChiefClass : BaseCharacterClass
 {
+    private Skill combatSkill = new Skill();
+    private Skill passiveSkill = new Skill();
 
     public BaseChiefClass()
     {
@@ -16,5 +18,21 @@ public class BaseChiefClass : BaseCharacterClass
         Rhetoric = 8;
         Diplomacy = 9;
         Image = 7;
+
+        combatSkill.SkillName = "The Big Stick of Diplomacy";
+        combatSkill.SkillDescription = "You brandish your weapon of choice menacingly and swing it upside the head of your enemy with incredible diplomatic skill.";
+        combatSkill.SkillID = 3;
+        combatSkill.SkillRank = 1;
+        combatSkill.SkillType = Skill.SkillTypes.COMBAT;
+        combatSkill.ExperienceNeededToLevelSkill = 10;
+
+        passiveSkill.SkillName = "Glower of Hate";
+        passiveSkill.SkillDescription = "Your eyes alone are enough to make your foes quake in fear.";
+        passiveSkill.SkillID = 4;
+        passiveSkill.SkillRank = 1;
+        passiveSkill.SkillType = Skill.SkillTypes.PASSIVE;
+        passiveSkill.ExperienceNeededToLevelSkill = 10;
+
+        CharacterClassSkills = new List<Skill> { combatSkill, passiveSkill };
     }	
 }
