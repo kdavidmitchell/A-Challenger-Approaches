@@ -11,6 +11,7 @@ public class BasePlayer
     private int rhetoric;
     private int image;
     private int diplomacy;
+    private List<Skill> playerSkills;
 
     public string PlayerName
     {
@@ -46,6 +47,12 @@ public class BasePlayer
     {
         get { return diplomacy; }
         set { diplomacy = value; }
+    }
+
+    public List<Skill> PlayerSkills
+    {
+        get { return playerSkills; }
+        set { playerSkills = value; }
     }
 
 }
