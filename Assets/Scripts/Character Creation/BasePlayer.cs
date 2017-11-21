@@ -8,9 +8,15 @@ public class BasePlayer
     private string playerName;
     private int playerLevel;
     private BaseCharacterClass playerClass;
+
     private int rhetoric;
     private int image;
     private int diplomacy;
+
+    private int currency;
+
+    private float currentXP;
+    private float requiredXP;
     private List<Skill> playerSkills;
 
     public string PlayerName
@@ -53,6 +59,16 @@ public class BasePlayer
     {
         get { return playerSkills; }
         set { playerSkills = value; }
+    }
+
+    public float CurrentXP { get; set; }
+
+    public float RequiredXP { get; set; }
+
+    public int Currency
+    {
+        get { return currency; }
+        set { currency = value; }
     }
 
 }

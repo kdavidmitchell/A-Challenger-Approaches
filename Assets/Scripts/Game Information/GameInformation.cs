@@ -11,6 +11,10 @@ public class GameInformation : MonoBehaviour {
     public static int Rhetoric { get; set; }
     public static int Image { get; set; }
     public static int Diplomacy { get; set; }
+    public static float CurrentXP { get; set; }
+    public static float RequiredXP { get; set; }
+    public static List<Skill> PlayerSkills { get; set; }
+    public static int Currency { get; set; }
 
     void Awake()
     {
