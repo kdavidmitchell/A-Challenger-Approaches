@@ -65,22 +65,9 @@ public class CreateNewCharacter : MonoBehaviour
                 newPlayer.PlayerClass = new BaseSophistClass();
             }
 
-            newPlayer.PlayerName = playerName;
-            newPlayer.PlayerLevel = 1;
-            newPlayer.Rhetoric = newPlayer.PlayerClass.Rhetoric;
-            newPlayer.Image = newPlayer.PlayerClass.Image;
-            newPlayer.Diplomacy = newPlayer.PlayerClass.Diplomacy;
-            newPlayer.PlayerSkills = newPlayer.PlayerClass.CharacterClassSkills;
-
+            CreateNewPlayer();
             StoreNewPlayerInfo();
             SaveInformation.SaveAllInformation();
-
-            Debug.Log("Player Name: " + newPlayer.PlayerName);
-            Debug.Log("Player Class: " + newPlayer.PlayerClass.CharacterClassName);
-            Debug.Log("Player Level: " + newPlayer.PlayerLevel);
-            Debug.Log("Player Rhetoric: " + newPlayer.Rhetoric);
-            Debug.Log("Player Image: " + newPlayer.Image);
-            Debug.Log("Player Diplomacy: " + newPlayer.Diplomacy);
             
             foreach (Skill skill in newPlayer.PlayerSkills)
             {
@@ -101,5 +88,25 @@ public class CreateNewCharacter : MonoBehaviour
         GameInformation.Rhetoric = newPlayer.Rhetoric;
         GameInformation.Image = newPlayer.Image;
         GameInformation.Diplomacy = newPlayer.Diplomacy;
+        GameInformation.PlayerSkills = newPlayer.PlayerSkills;
+        GameInformation.Currency = newPlayer.Currency;
+    }
+
+    private void CreateNewPlayer()
+    {
+        newPlayer.PlayerName = playerName;
+        newPlayer.PlayerLevel = 1;
+        newPlayer.Rhetoric = newPlayer.PlayerClass.Rhetoric;
+        newPlayer.Image = newPlayer.PlayerClass.Image;
+        newPlayer.Diplomacy = newPlayer.PlayerClass.Diplomacy;
+        newPlayer.PlayerSkills = newPlayer.PlayerClass.CharacterClassSkills;
+        newPlayer.Currency = 0;
+
+        Debug.Log("Player Name: " + newPlayer.PlayerName);
+        Debug.Log("Player Class: " + newPlayer.PlayerClass.CharacterClassName);
+        Debug.Log("Player Level: " + newPlayer.PlayerLevel);
+        Debug.Log("Player Rhetoric: " + newPlayer.Rhetoric);
+        Debug.Log("Player Image: " + newPlayer.Image);
+        Debug.Log("Player Diplomacy: " + newPlayer.Diplomacy);
     }
 }
