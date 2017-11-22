@@ -17,6 +17,7 @@ public class BasePlayer
 
     private float currentXP;
     private float requiredXP;
+    private int statPointsToAllocate;
     private List<Skill> playerSkills;
 
     public string PlayerName
@@ -64,6 +65,8 @@ public class BasePlayer
     public float CurrentXP { get; set; }
 
     public float RequiredXP { get; set; }
+
+    public int StatPointsToAllocate { get; set; }
 
     public int Currency
     {
