@@ -17,7 +17,7 @@ public class CreatePlayerGUI : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        currentState = CreatePlayerStates.STAT_ALLOCATION;	
+		currentState = CreatePlayerStates.CLASS_SELECTION;	
 	}
 	
 	// Update is called once per frame
