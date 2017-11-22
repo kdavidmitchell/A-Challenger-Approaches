@@ -8,6 +8,8 @@ public class DisplayCreatePlayerFunctions
     private int classSelection;
     private string[] classSelectionNames = new string[] { "Gladhander", "Chief-of-Staff", "Sophist" };
 
+    private StatAllocationModule statAllocationModule = new StatAllocationModule();
+
 	public void DisplayClassSelections()
     {
         //list of toggle buttons and each button will be a different class
@@ -60,6 +62,11 @@ public class DisplayCreatePlayerFunctions
                                 "Diplomacy: " + tempClass.Diplomacy;
             return tempStats;
         }
+    }
+
+    public void DisplayStatAllocation()
+    {
+        statAllocationModule.DisplayStatAllocationModule();
     }
 
     public void DisplayFinalSetup()
