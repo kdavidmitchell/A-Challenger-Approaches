@@ -18,6 +18,9 @@ public class GameInformation : MonoBehaviour {
     public static List<Skill> PlayerSkills { get; set; }
     public static int Currency { get; set; }
 
+	public static float PlayerHealth { get; set; }
+	public static float PlayerEnergy { get; set; }
+
     void Awake()
     {
         DontDestroyOnLoad(gameObject);

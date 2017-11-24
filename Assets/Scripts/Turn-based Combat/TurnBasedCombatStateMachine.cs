@@ -6,6 +6,7 @@ public class TurnBasedCombatStateMachine : MonoBehaviour
 {
 
     private bool hasAddedXP = false;
+	private BattleStateStart battleStateStartScript = new BattleStateStart();
 
 	public enum BattleStates
 	{
@@ -14,11 +15,13 @@ public class TurnBasedCombatStateMachine : MonoBehaviour
 		//player_animate
 		ENEMY_TURN,
 		//enemy_animate
+		CALCULATE_DAMAGE,
+		ADD_STATUS_EFFECTS,
 		LOSE,
 		WIN
 	}
 
-	private BattleStates currentState;
+	public static BattleStates currentState;
 
 	// Use this for initialization
 	void Start () 
@@ -35,10 +38,16 @@ public class TurnBasedCombatStateMachine : MonoBehaviour
 		{
 			case (BattleStates.START):
 				//setup battle function
+				//create enemy
+				battleStateStartScript.PrepareBattle();
 				break;
 			case (BattleStates.PLAYER_TURN):
 				break;
 			case (BattleStates.ENEMY_TURN):
+				break;
+			case (BattleStates.CALCULATE_DAMAGE):
+				break;
+			case (BattleStates.ADD_STATUS_EFFECTS):
 				break;
 			case (BattleStates.LOSE):
 				break;

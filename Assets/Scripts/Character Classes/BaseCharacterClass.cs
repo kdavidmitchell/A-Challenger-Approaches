@@ -7,11 +7,19 @@ public class BaseCharacterClass
 
     private string characterClassName;
     private string characterClassDescription;
+	private CharacterClasses characterClass;
 
     //Statistics
     private int diplomacy;
     private int rhetoric;
     private int image;
+
+	public enum CharacterClasses
+	{
+		GLADHANDER,
+		CHIEF,
+		SOPHIST
+	}
 
     //Skills
     private List<Skill> characterClassSkills;
@@ -45,6 +53,12 @@ public class BaseCharacterClass
         get { return image; }
         set { image = value; }
     }
+
+	public CharacterClasses CharacterClass
+	{
+		get { return characterClass; }
+		set { characterClass = value; }
+	}
 
     public List<Skill> CharacterClassSkills
     {

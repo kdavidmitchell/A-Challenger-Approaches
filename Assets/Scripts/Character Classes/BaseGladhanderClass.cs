@@ -17,6 +17,7 @@ public class BaseGladhanderClass: BaseCharacterClass
         Rhetoric = 7;
         Diplomacy = 8;
         Image = 9;
+		CharacterClass = CharacterClasses.GLADHANDER;
 
         combatSkill.SkillName = "To My Aide!";
         combatSkill.SkillDescription = "Summons an underpaid, overworked intern to harass your enemies with requests for overdue paperwork.";
