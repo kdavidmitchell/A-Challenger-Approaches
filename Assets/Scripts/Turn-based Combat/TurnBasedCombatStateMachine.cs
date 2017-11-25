@@ -9,9 +9,15 @@ public class TurnBasedCombatStateMachine : MonoBehaviour
 	private BattleStateStart battleStateStartScript = new BattleStateStart();
 	private BattleCalculations battleCalculationsScript = new BattleCalculations ();
 	private BattleStateAddStatusEffects battleStateAddStatusEffectsScript = new BattleStateAddStatusEffects();
-	public static BaseAbility playerUsedAbility;
-	public static int statusEffectBaseDamage;
+	private BattleStateEnemyTurn battleStateEnemyTurnScript = new BattleStateEnemyTurn();
 
+	public static BaseAbility playerUsedAbility;
+	public static BaseAbility enemyUsedAbility;
+	public static int statusEffectBaseDamage;
+	public static int totalTurnCount;
+	public static bool playerCompletedTurn;
+	public static bool enemyCompletedTurn;
+	public static BattleStates currentTurnOwner;
 
 	public enum BattleStates
 	{
@@ -22,6 +28,7 @@ public class TurnBasedCombatStateMachine : MonoBehaviour
 		//enemy_animate
 		CALCULATE_DAMAGE,
 		ADD_STATUS_EFFECTS,
+		END_TURN,
 		LOSE,
 		WIN
 	}
@@ -32,6 +39,7 @@ public class TurnBasedCombatStateMachine : MonoBehaviour
 	void Start () 
 	{
         hasAddedXP = false;
+		totalTurnCount = 1;
 		currentState = BattleStates.START;	
 	}
 	
@@ -47,14 +55,30 @@ public class TurnBasedCombatStateMachine : MonoBehaviour
 				battleStateStartScript.PrepareBattle();
 				break;
 			case (BattleStates.PLAYER_TURN):
+				currentTurnOwner = BattleStates.PLAYER_TURN;
 				break;
 			case (BattleStates.ENEMY_TURN):
+				currentTurnOwner = BattleStates.ENEMY_TURN;
+				battleStateEnemyTurnScript.EnemyTakeTurn ();
+				//enemyCompletedTurn = true;
+				//CheckTurnOwner ();
 				break;
 			case (BattleStates.CALCULATE_DAMAGE):
-				battleCalculationsScript.CalculateTotalPlayerDamage (playerUsedAbility);
+				if (currentTurnOwner == BattleStates.PLAYER_TURN) {
+					battleCalculationsScript.CalculateTotalPlayerDamage (playerUsedAbility);
+				}
+				if (currentTurnOwner == BattleStates.ENEMY_TURN) {
+					battleCalculationsScript.CalculateTotalEnemyDamage (enemyUsedAbility);
+				}
+				CheckTurnOwner ();	
 				break;
 			case (BattleStates.ADD_STATUS_EFFECTS):
 				battleStateAddStatusEffectsScript.CheckAbilityForStatusEffect (playerUsedAbility);
+				break;
+			case (BattleStates.END_TURN):
+				totalTurnCount++;
+				playerCompletedTurn = false;
+				enemyCompletedTurn = false;
 				break;
 			case (BattleStates.LOSE):
 				break;
@@ -76,6 +100,20 @@ public class TurnBasedCombatStateMachine : MonoBehaviour
 			{
 				currentState = BattleStates.PLAYER_TURN;
 			}
+		}
+	}
+
+	private void CheckTurnOwner()
+	{
+		if (playerCompletedTurn && !enemyCompletedTurn) {
+			//enemy turn
+			currentState = BattleStates.ENEMY_TURN;
+		} else if (!playerCompletedTurn && enemyCompletedTurn) {
+			//player turn
+			currentState = BattleStates.PLAYER_TURN;
+		} else if (playerCompletedTurn && enemyCompletedTurn) {
+			//switch to end turn state
+			currentState = BattleStates.END_TURN;
 		}
 	}
 

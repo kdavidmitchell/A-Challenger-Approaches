@@ -37,6 +37,7 @@ public class BattleStateStart
 	private void DeterminePlayerVitals()
 	{
 		//testing purposes
+		GameInformation.PlayerName = "Test";
 		GameInformation.PlayerClass = new BaseGladhanderClass ();
 		GameInformation.Rhetoric = GameInformation.PlayerClass.Rhetoric;
 		GameInformation.Image = GameInformation.PlayerClass.Image;

@@ -1,25 +1,35 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BattleGUI : MonoBehaviour 
 {
-
-	private string playerName;
+	private Text playerName;
+	private Text playerHealth;
+	private Image playerHealthImage;
+	//private string playerName;
 	private int playerLevel;
-	private int playerHealth;
+	//private int playerHealth;
 	private int playerEnergy;
 
 	// Use this for initialization
 	void Start () 
 	{
-		playerName = GameInformation.PlayerName;
+		playerName = GameObject.Find ("PlayerName").GetComponent<Text>();
+		GameInformation.PlayerName = "Test";
+		playerName.text = GameInformation.PlayerName;
+
+		playerHealth = GameObject.Find ("PlayerHealthValue").GetComponent<Text>();
+		playerHealthImage = GameObject.Find ("PlayerHealthBar").GetComponent<Image> ();
+
+		//playerName = GameInformation.PlayerName;
 		playerLevel = GameInformation.PlayerLevel;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		playerHealth.text = GameInformation.PlayerHealth.ToString ();
 	}
 
 	void OnGUI()

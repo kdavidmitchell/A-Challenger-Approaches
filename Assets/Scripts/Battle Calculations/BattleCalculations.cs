@@ -16,18 +16,19 @@ public class BattleCalculations
 		totalUsedAbilityDamage = (int)(CalculateAbilityDamage (usedAbility));
 		Debug.Log (totalUsedAbilityDamage);
 		totalPlayerDamage = totalUsedAbilityDamage + CalculateStatusEffectDamage ();
+		TurnBasedCombatStateMachine.playerCompletedTurn = true;
+		//TurnBasedCombatStateMachine.currentState = TurnBasedCombatStateMachine.BattleStates.ENEMY_TURN;
+
 	}
 
-	public void CalculatePlayerUsedAbilityDamage(BaseAbility usedAbility)
+	public void CalculateTotalEnemyDamage(BaseAbility usedAbility)
 	{
+		totalUsedAbilityDamage = (int)(CalculateAbilityDamage (usedAbility));
+		Debug.Log (totalUsedAbilityDamage);
+		totalPlayerDamage = totalUsedAbilityDamage + CalculateStatusEffectDamage ();
+		TurnBasedCombatStateMachine.enemyCompletedTurn = true;
+		//TurnBasedCombatStateMachine.currentState = TurnBasedCombatStateMachine.BattleStates.ENEMY_TURN;
 
-		//use an ability
-		//calculate damage
-		//check status effect
-			//if the move has a status effect
-				//try to add effect
-				//if effect is added then apply damage from effect
-		//calculate total damage with status effect in mind
 	}
 
 	private float CalculateAbilityDamage(BaseAbility usedAbility)
