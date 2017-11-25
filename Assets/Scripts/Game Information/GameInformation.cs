@@ -21,6 +21,10 @@ public class GameInformation : MonoBehaviour {
 	public static float PlayerHealth { get; set; }
 	public static float PlayerEnergy { get; set; }
 
+	public static BaseAbility PlayerMove1 = new AttackAbility();
+	public static BaseAbility PlayerMove2 = new ToMyAide();
+	public static BaseAbility PassiveAbility = new RazzleDazzle();
+
     void Awake()
     {
         DontDestroyOnLoad(gameObject);

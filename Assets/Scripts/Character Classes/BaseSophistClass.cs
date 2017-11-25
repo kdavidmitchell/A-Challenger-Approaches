@@ -19,6 +19,9 @@ public class BaseSophistClass : BaseCharacterClass
         Diplomacy = 7;
         Image = 8;
 		CharacterClass = CharacterClasses.SOPHIST;
+		playerAbilities.Add (new AttackAbility ());
+		playerAbilities.Add (new Tirade ());
+		playerAbilities.Add (new QuestionableLogic ());
 
         combatSkill.SkillName = "Long-winded Tirade";
         combatSkill.SkillDescription = "Your skill in filibustering is legend, and almost all of your speeches have been known to put your foes into a deep sleep.";

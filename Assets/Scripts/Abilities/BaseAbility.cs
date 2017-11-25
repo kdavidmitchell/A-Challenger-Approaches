@@ -13,6 +13,7 @@ public class BaseAbility
 	private int abilityCost;
 	private AbilityTypes abilityType;
 	private int abilityRank;
+	private BaseStatusEffect abilityStatusEffect;
 
 	public enum AbilityTypes
 	{
@@ -60,5 +61,11 @@ public class BaseAbility
 	{
 		get { return abilityRank; }
 		set { abilityRank = value; }
+	}
+
+	public BaseStatusEffect AbilityStatusEffect
+	{
+		get { return abilityStatusEffect; }
+		set { abilityStatusEffect = value; }
 	}
 }

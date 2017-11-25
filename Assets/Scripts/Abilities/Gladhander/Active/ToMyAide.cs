@@ -10,9 +10,10 @@ public class ToMyAide : BaseAbility
 		AbilityName = "To My Aide!";
 		AbilityDescription = "Summons an underpaid, overworked intern to harass your enemies with requests for overdue paperwork.";
 		AbilityID = 4;
-		AbilityDamage = 3;
+		AbilityDamage = 4;
 		AbilityCost = 2;
 		AbilityType = AbilityTypes.ACTIVE;
 		AbilityRank = 1;
+		AbilityStatusEffect = new HarassedStatusEffect ();
 	}
 }

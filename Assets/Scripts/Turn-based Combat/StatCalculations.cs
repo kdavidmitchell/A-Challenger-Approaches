@@ -12,6 +12,8 @@ public class StatCalculations
 	private float playerRhetoricModifier = 0.3f;
 	private float modifier;
 
+	private float mainStatModifier = 0.5f;
+
 	public enum StatType
 	{
 		RHETORIC,
@@ -71,5 +73,23 @@ public class StatCalculations
 	public int CalculateEnergy(int statVal)
 	{
 		return statVal * 5; //calculate energy based on total rhetoric stat times 5
+	}
+
+	public int FindPlayerMainStatAndCalculateMainStatModifier()
+	{
+		if (GameInformation.PlayerClass.CharacterClassName == "Gladhander") 
+		{
+			return (int)(GameInformation.Image * mainStatModifier);
+		}
+		if (GameInformation.PlayerClass.CharacterClassName == "Chief-of-Staff") 
+		{
+			return (int)(GameInformation.Diplomacy * mainStatModifier);
+		}
+		if (GameInformation.PlayerClass.CharacterClassName == "Sophist") 
+		{
+			return (int)(GameInformation.Rhetoric * mainStatModifier);
+		}
+
+		return 1;
 	}
 }

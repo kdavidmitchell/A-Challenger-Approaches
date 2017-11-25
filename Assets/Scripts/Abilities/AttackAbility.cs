@@ -10,7 +10,7 @@ public class AttackAbility : BaseAbility
 		AbilityName = "Attack";
 		AbilityDescription = "A normal attack. However you would like to interpret that.";
 		AbilityID = 1;
-		AbilityDamage = 4;
+		AbilityDamage = 3;
 		AbilityCost = 0;
 		AbilityType = AbilityTypes.ACTIVE;
 		AbilityRank = 1;

@@ -7,6 +7,11 @@ public class TurnBasedCombatStateMachine : MonoBehaviour
 
     private bool hasAddedXP = false;
 	private BattleStateStart battleStateStartScript = new BattleStateStart();
+	private BattleCalculations battleCalculationsScript = new BattleCalculations ();
+	private BattleStateAddStatusEffects battleStateAddStatusEffectsScript = new BattleStateAddStatusEffects();
+	public static BaseAbility playerUsedAbility;
+	public static int statusEffectBaseDamage;
+
 
 	public enum BattleStates
 	{
@@ -46,8 +51,10 @@ public class TurnBasedCombatStateMachine : MonoBehaviour
 			case (BattleStates.ENEMY_TURN):
 				break;
 			case (BattleStates.CALCULATE_DAMAGE):
+				battleCalculationsScript.CalculateTotalPlayerDamage (playerUsedAbility);
 				break;
 			case (BattleStates.ADD_STATUS_EFFECTS):
+				battleStateAddStatusEffectsScript.CheckAbilityForStatusEffect (playerUsedAbility);
 				break;
 			case (BattleStates.LOSE):
 				break;

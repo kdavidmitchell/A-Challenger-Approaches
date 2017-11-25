@@ -18,6 +18,9 @@ public class BaseGladhanderClass: BaseCharacterClass
         Diplomacy = 8;
         Image = 9;
 		CharacterClass = CharacterClasses.GLADHANDER;
+		playerAbilities.Add (new AttackAbility ());
+		playerAbilities.Add (new ToMyAide ());
+		playerAbilities.Add (new RazzleDazzle ());
 
         combatSkill.SkillName = "To My Aide!";
         combatSkill.SkillDescription = "Summons an underpaid, overworked intern to harass your enemies with requests for overdue paperwork.";

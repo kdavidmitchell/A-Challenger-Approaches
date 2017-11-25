@@ -23,6 +23,7 @@ public class BaseCharacterClass
 
     //Skills
     private List<Skill> characterClassSkills;
+	public List<BaseAbility> playerAbilities = new List<BaseAbility> ();
 
     public string CharacterClassName
     {

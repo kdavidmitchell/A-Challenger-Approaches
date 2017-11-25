@@ -19,6 +19,9 @@ public class BaseChiefClass : BaseCharacterClass
         Diplomacy = 9;
         Image = 7;
 		CharacterClass = CharacterClasses.CHIEF;
+		playerAbilities.Add (new AttackAbility ());
+		playerAbilities.Add (new BigStick ());
+		playerAbilities.Add (new GlowerOfHate ()); 
 
         combatSkill.SkillName = "The Big Stick of Diplomacy";
         combatSkill.SkillDescription = "You brandish your weapon of choice menacingly and swing it upside the head of your enemy with incredible diplomatic skill.";

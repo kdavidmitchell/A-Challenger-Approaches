@@ -19,6 +19,7 @@ public class BattleStateStart
 	{
 		//create enemy
 		CreateNewEnemy();
+		DeterminePlayerVitals ();
 		//player goes first
 		TurnBasedCombatStateMachine.currentState = TurnBasedCombatStateMachine.BattleStates.PLAYER_TURN;
 	}
@@ -35,6 +36,12 @@ public class BattleStateStart
 
 	private void DeterminePlayerVitals()
 	{
+		//testing purposes
+		GameInformation.PlayerClass = new BaseGladhanderClass ();
+		GameInformation.Rhetoric = GameInformation.PlayerClass.Rhetoric;
+		GameInformation.Image = GameInformation.PlayerClass.Image;
+		GameInformation.Diplomacy = GameInformation.PlayerClass.Diplomacy;
+
 		playerDiplomacy = statCalculations.CalculateStat (GameInformation.Diplomacy, StatCalculations.StatType.DIPLOMACY, GameInformation.PlayerLevel, false);
 		playerRhetoric = statCalculations.CalculateStat (GameInformation.Rhetoric, StatCalculations.StatType.RHETORIC, GameInformation.PlayerLevel, false);
 	
