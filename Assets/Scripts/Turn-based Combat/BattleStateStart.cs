@@ -19,7 +19,7 @@ public class BattleStateStart
 	{
 		//create enemy
 		CreateNewEnemy();
-		DeterminePlayerVitals ();
+		DeterminePlayerVitals();
 		//player goes first
 		TurnBasedCombatStateMachine.currentState = TurnBasedCombatStateMachine.BattleStates.PLAYER_TURN;
 	}

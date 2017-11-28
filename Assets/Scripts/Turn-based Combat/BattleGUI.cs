@@ -13,12 +13,14 @@ public class BattleGUI : MonoBehaviour
 	//private int playerHealth;
 	private int playerEnergy;
 
+	private Text abilityOneName;
+	private Text abilityTwoName;
+
 	// Use this for initialization
 	void Start () 
 	{
 		playerName = GameObject.Find ("PlayerName").GetComponent<Text>();
-		GameInformation.PlayerName = "Test";
-		playerName.text = GameInformation.PlayerName;
+		//GameInformation.PlayerName = "Test";
 
 		playerHealth = GameObject.Find ("PlayerHealthValue").GetComponent<Text>();
 		playerHealthImage = GameObject.Find ("PlayerHealthBar").GetComponent<Image> ();
@@ -28,8 +30,10 @@ public class BattleGUI : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
 		playerHealth.text = GameInformation.PlayerHealth.ToString ();
+		playerName.text = GameInformation.PlayerName;
 	}
 
 	void OnGUI()
@@ -41,6 +45,18 @@ public class BattleGUI : MonoBehaviour
 		//enemy health and other enemy information
 		//player health and other info
 	}
+
+	 public void MeleeAbilityOne()
+	 {
+	 	TurnBasedCombatStateMachine.playerUsedAbility = GameInformation.PlayerMove1;
+		TurnBasedCombatStateMachine.currentState = TurnBasedCombatStateMachine.BattleStates.ADD_STATUS_EFFECTS;
+	 }
+
+	 public void MeleeAbilityTwo()
+	 {
+	 	TurnBasedCombatStateMachine.playerUsedAbility = GameInformation.PlayerMove2;
+		TurnBasedCombatStateMachine.currentState = TurnBasedCombatStateMachine.BattleStates.ADD_STATUS_EFFECTS;
+	 }
 
 	private void DisplayPlayerChoices()
 	{
@@ -57,5 +73,14 @@ public class BattleGUI : MonoBehaviour
 			TurnBasedCombatStateMachine.playerUsedAbility = GameInformation.PlayerMove1;
 			TurnBasedCombatStateMachine.currentState = TurnBasedCombatStateMachine.BattleStates.ADD_STATUS_EFFECTS;
 		}
+	}
+
+	public void FindAbilityInfo()
+	{
+		abilityOneName = GameObject.Find("A1Text").GetComponent<Text>();
+		abilityOneName.text = GameInformation.PlayerMove1.AbilityName;
+
+		abilityTwoName = GameObject.Find("A2Text").GetComponent<Text>();
+		abilityTwoName.text = GameInformation.PlayerMove2.AbilityName;
 	}
 }
