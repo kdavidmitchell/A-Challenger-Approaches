@@ -12,45 +12,59 @@ public class BattleStateStart
 
 	private int playerDiplomacy;
 	private int playerRhetoric;
-	private int playerHealth;
-	private int playerEnergy;
+	private float playerMaxHealth;
+	private float playerMaxEnergy;
+
+	private int enemyDiplomacy;
+	private int enemyRhetoric;
+	public float enemyMaxHealth;
+	public float enemyMaxEnergy;
+	public float enemyCurrentHealth;
+	public float enemyCurrentEnergy;
 
 	public void PrepareBattle()
 	{
 		//create enemy
-		CreateNewEnemy();
-		DeterminePlayerVitals();
+		//CreateNewEnemy();
+		//DeterminePlayerVitals();
 		//player goes first
 		TurnBasedCombatStateMachine.currentState = TurnBasedCombatStateMachine.BattleStates.PLAYER_TURN;
 	}
 
-	private void CreateNewEnemy()
+	public void CreateNewEnemy()
 	{
 		newEnemy.PlayerName = enemyNames[Random.Range(0, enemyNames.Length - 1)];
 		newEnemy.PlayerLevel = GameInformation.PlayerLevel;
 		newEnemy.PlayerClass = classTypes [Random.Range (0, classTypes.Length - 1)];
-		newEnemy.Rhetoric = statCalculations.CalculateStat (newEnemy.Rhetoric, StatCalculations.StatType.RHETORIC, newEnemy.PlayerLevel, true);
-		newEnemy.Image = statCalculations.CalculateStat (newEnemy.Image, StatCalculations.StatType.IMAGE, newEnemy.PlayerLevel, true);
-		newEnemy.Diplomacy = statCalculations.CalculateStat (newEnemy.Diplomacy, StatCalculations.StatType.DIPLOMACY, newEnemy.PlayerLevel, true);
+		newEnemy.Rhetoric = statCalculations.CalculateStat (newEnemy.PlayerClass.Rhetoric, StatCalculations.StatType.RHETORIC, newEnemy.PlayerLevel, true);
+		newEnemy.Image = statCalculations.CalculateStat (newEnemy.PlayerClass.Image, StatCalculations.StatType.IMAGE, newEnemy.PlayerLevel, true);
+		newEnemy.Diplomacy = statCalculations.CalculateStat (newEnemy.PlayerClass.Diplomacy, StatCalculations.StatType.DIPLOMACY, newEnemy.PlayerLevel, true);
+		
+		enemyMaxHealth = statCalculations.CalculateHealth (newEnemy.Diplomacy);
+		enemyMaxEnergy = statCalculations.CalculateEnergy (newEnemy.Rhetoric);
+		enemyCurrentHealth = enemyMaxHealth;
+		enemyCurrentEnergy = enemyMaxEnergy;
 	}
 
-	private void DeterminePlayerVitals()
+	public void DeterminePlayerVitals()
 	{
 		//testing purposes
-		GameInformation.PlayerName = "Test";
+		/*GameInformation.PlayerName = "Test";
 		GameInformation.PlayerClass = new BaseGladhanderClass ();
 		GameInformation.Rhetoric = GameInformation.PlayerClass.Rhetoric;
 		GameInformation.Image = GameInformation.PlayerClass.Image;
-		GameInformation.Diplomacy = GameInformation.PlayerClass.Diplomacy;
+		GameInformation.Diplomacy = GameInformation.PlayerClass.Diplomacy;*/
 
 		playerDiplomacy = statCalculations.CalculateStat (GameInformation.Diplomacy, StatCalculations.StatType.DIPLOMACY, GameInformation.PlayerLevel, false);
 		playerRhetoric = statCalculations.CalculateStat (GameInformation.Rhetoric, StatCalculations.StatType.RHETORIC, GameInformation.PlayerLevel, false);
 	
-		playerHealth = statCalculations.CalculateHealth (playerDiplomacy);
-		playerEnergy = statCalculations.CalculateEnergy (playerRhetoric);
+		playerMaxHealth = statCalculations.CalculateHealth (playerDiplomacy);
+		playerMaxEnergy = statCalculations.CalculateEnergy (playerRhetoric);
 
-		GameInformation.PlayerHealth = playerHealth;
-		GameInformation.PlayerEnergy = playerEnergy;
+		GameInformation.PlayerMaxHealth = playerMaxHealth;
+		GameInformation.PlayerHealth = playerMaxHealth;
+		GameInformation.PlayerMaxEnergy = playerMaxEnergy;
+		GameInformation.PlayerEnergy = playerMaxEnergy;
 	}
 
 }

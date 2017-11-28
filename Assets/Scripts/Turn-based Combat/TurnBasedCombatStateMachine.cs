@@ -10,6 +10,7 @@ public class TurnBasedCombatStateMachine : MonoBehaviour
 	private BattleCalculations battleCalculationsScript = new BattleCalculations ();
 	private BattleStateAddStatusEffects battleStateAddStatusEffectsScript = new BattleStateAddStatusEffects();
 	private BattleStateEnemyTurn battleStateEnemyTurnScript = new BattleStateEnemyTurn();
+	public static BattleFunctions battleFunctionsScript = new BattleFunctions();
 
 	public static BaseAbility playerUsedAbility;
 	public static BaseAbility enemyUsedAbility;
@@ -36,7 +37,7 @@ public class TurnBasedCombatStateMachine : MonoBehaviour
 	public static BattleStates currentState;
 
 	// Use this for initialization
-	void Start () 
+	void Awake () 
 	{
         hasAddedXP = false;
 		totalTurnCount = 1;
@@ -64,11 +65,24 @@ public class TurnBasedCombatStateMachine : MonoBehaviour
 				//CheckTurnOwner ();
 				break;
 			case (BattleStates.CALCULATE_DAMAGE):
-				if (currentTurnOwner == BattleStates.PLAYER_TURN) {
+				if (currentTurnOwner == BattleStates.PLAYER_TURN) 
+				{
 					battleCalculationsScript.CalculateTotalPlayerDamage (playerUsedAbility);
+					battleCalculationsScript.GetEnergyCost (playerUsedAbility);
+					
+					if (battleFunctionsScript.enemyCurrentHealth <= 0)
+					{
+						currentState = BattleStates.WIN;
+					}
 				}
-				if (currentTurnOwner == BattleStates.ENEMY_TURN) {
+				if (currentTurnOwner == BattleStates.ENEMY_TURN) 
+				{
 					battleCalculationsScript.CalculateTotalEnemyDamage (enemyUsedAbility);
+
+					if (battleFunctionsScript.playerCurrentHealth <= 0)
+					{
+						currentState = BattleStates.LOSE;
+					}
 				}
 				CheckTurnOwner ();	
 				break;
@@ -78,7 +92,7 @@ public class TurnBasedCombatStateMachine : MonoBehaviour
 			case (BattleStates.END_TURN):
 				totalTurnCount++;
 				playerCompletedTurn = false;
-				enemyCompletedTurn = false;
+				enemyCompletedTurn = false; 
 				break;
 			case (BattleStates.LOSE):
 				break;

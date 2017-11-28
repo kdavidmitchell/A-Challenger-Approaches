@@ -5,9 +5,6 @@ using UnityEngine;
 public class EnemyAbilityChoice 
 {
 
-	private int totalPlayerHealth;
-	private int playerHealthPercentage;
-
 	private BaseAbility chosenAbility;
 
 	public BaseAbility ChooseEnemyAbility()

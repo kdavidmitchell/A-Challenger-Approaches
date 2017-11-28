@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Demo/DemoCC.unity
+    guid: d7c601cffff65e2418245bb91d655ae8
+  - enabled: 1
+    path: Assets/Demo/DemoBattle.unity
+    guid: 834e7ce0d30f2f941a82a7e34eacfbb4

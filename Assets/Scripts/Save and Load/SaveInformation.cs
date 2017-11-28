@@ -29,5 +29,6 @@ public class SaveInformation
         Debug.Log("SAVED ALL INFORMATION.");
         Debug.Log(GameInformation.PlayerClass.CharacterClassName);
         Debug.Log(GameInformation.PlayerName);
+        Debug.Log(GameInformation.Rhetoric);
     }
 }
