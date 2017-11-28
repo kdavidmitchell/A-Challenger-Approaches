@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"Input",
+				"InputField"
+			],
+			[
+				"Game",
+				"GameObject"
+			],
+			[
+				"class",
+				"class2toggle"
+			],
+			[
+				"Get",
+				"GetClassStats"
+			],
+			[
+				"gla",
+				"gladhanderStats"
+			],
+			[
+				"classNames",
+				"classNames.Length"
+			],
+			[
 				"Gam",
 				"GameInformation.PlayerMove2.AbilityName"
 			],
@@ -66,10 +90,6 @@
 			[
 				"title",
 				"titleCardLM"
-			],
-			[
-				"Game",
-				"GameObject"
 			]
 		]
 	},
@@ -106,6 +126,42 @@
 			"settings":
 			{
 				"buffer_size": 2792,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Assets/Scripts/Character Creation GUI/CreatePlayerGUI.cs",
+			"settings":
+			{
+				"buffer_size": 1552,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Assets/Scripts/Character Creation GUI/DisplayCreatePlayerFunctions.cs",
+			"settings":
+			{
+				"buffer_size": 5762,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Assets/Demo/CCFunctions.cs",
+			"settings":
+			{
+				"buffer_size": 5252,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/Save and Load/SaveInformation.cs",
+			"settings":
+			{
+				"buffer_size": 1209,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
@@ -161,6 +217,8 @@
 		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Abilities",
 		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Abilities/Gladhander",
 		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Abilities/Gladhander/Active",
+		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Character Classes",
+		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Character Creation GUI",
 		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Turn-based Combat"
 	],
 	"file_history":
@@ -202,7 +260,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 6,
 			"sheets":
 			[
 				{
@@ -230,7 +288,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
@@ -259,7 +317,7 @@
 						"translation.y": 540.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -288,7 +346,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -304,8 +362,8 @@
 						"selection":
 						[
 							[
-								1724,
-								1724
+								262,
+								262
 							]
 						],
 						"settings":
@@ -313,15 +371,129 @@
 							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 47.0,
-						"translation.y": 405.0,
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Assets/Scripts/Character Creation GUI/CreatePlayerGUI.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1552,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								584,
+								584
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Assets/Scripts/Character Creation GUI/DisplayCreatePlayerFunctions.cs",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 5762,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								262,
+								368
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1281.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "Assets/Demo/CCFunctions.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5252,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								268,
+								268
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 7,
+					"file": "Assets/Scripts/Save and Load/SaveInformation.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1209,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1200,
+								1200
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
 					"file": "Assets/Scripts/Turn-based Combat/BattleStateAddStatusEffects.cs",
 					"semi_transient": false,
 					"settings":
@@ -346,7 +518,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -429,7 +601,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 150.0,
+	"side_bar_width": 233.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

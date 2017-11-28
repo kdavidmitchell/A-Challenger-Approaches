@@ -27,6 +27,7 @@ public class SaveInformation
     	}
         
         Debug.Log("SAVED ALL INFORMATION.");
-        Debug.Log(GameInformation.PlayerSkills);
+        Debug.Log(GameInformation.PlayerClass.CharacterClassName);
+        Debug.Log(GameInformation.PlayerName);
     }
 }
