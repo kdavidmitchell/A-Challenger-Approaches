@@ -92,7 +92,7 @@ public class TurnBasedCombatStateMachine : MonoBehaviour
 		}	
 	}
 
-	void OnGUI()
+	/*void OnGUI()
 	{
 		if (GUILayout.Button("NEXT STATE"))
 		{
@@ -101,7 +101,7 @@ public class TurnBasedCombatStateMachine : MonoBehaviour
 				currentState = BattleStates.PLAYER_TURN;
 			}
 		}
-	}
+	}*/
 
 	private void CheckTurnOwner()
 	{
