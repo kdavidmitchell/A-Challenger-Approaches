@@ -62,7 +62,9 @@ public class BattleFunctions : MonoBehaviour
 		battleStateStartScript.CreateNewEnemy();
 		enemyName.text = battleStateStartScript.newEnemy.PlayerName;
 		enemyCurrentHealth = battleStateStartScript.enemyCurrentHealth;
+		enemyMaxHealth = enemyCurrentHealth;
 		enemyCurrentEnergy = battleStateStartScript.enemyCurrentEnergy;
+		enemyMaxEnergy = enemyCurrentEnergy;
 		enemyHealth.text = enemyCurrentHealth.ToString();
 		enemyEnergy.text = enemyCurrentEnergy.ToString();
 	}
@@ -100,28 +102,5 @@ public class BattleFunctions : MonoBehaviour
 
 		abilityTwoName = GameObject.Find("A2Text").GetComponent<Text>();
 		abilityTwoName.text = GameInformation.PlayerMove2.AbilityName;
-	}
-
-	public void UpdateDisplayedInfo()
-	{
-		/*playerHealth = GameObject.Find ("PlayerHealthValue").GetComponent<Text>();
-		playerHealthImage = GameObject.Find ("PlayerHealthBar").GetComponent<Image>();
-		playerEnergy = GameObject.Find ("PlayerEnergyValue").GetComponent<Text>();
-		playerEnergyImage = GameObject.Find ("PlayerEnergyBar").GetComponent<Image>();
-
-		enemyHealth = GameObject.Find ("EnemyHealthValue").GetComponent<Text>();
-		enemyHealthImage = GameObject.Find ("EnemyHealthBar").GetComponent<Image>();
-		enemyEnergy = GameObject.Find ("EnemyEnergyValue").GetComponent<Text>();
-		enemyEnergyImage = GameObject.Find ("EnemyEnergyBar").GetComponent<Image>();*/
-
-		/*playerHealth.text = playerCurrentHealth.ToString();
-		playerEnergy.text = playerCurrentEnergy.ToString();
-		playerHealthImage.fillAmount = playerCurrentHealth / GameInformation.PlayerMaxHealth;
-		playerEnergyImage.fillAmount = playerCurrentEnergy / GameInformation.PlayerMaxEnergy;
-
-		enemyHealth.text = enemyCurrentHealth.ToString();
-		enemyEnergy.text = enemyCurrentEnergy.ToString();
-		enemyHealthImage.fillAmount = enemyCurrentHealth / enemyMaxHealth;
-		enemyEnergyImage.fillAmount = enemyCurrentEnergy / enemyMaxEnergy;*/
 	}
 }

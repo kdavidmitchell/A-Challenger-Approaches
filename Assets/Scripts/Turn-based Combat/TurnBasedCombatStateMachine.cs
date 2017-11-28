@@ -10,8 +10,8 @@ public class TurnBasedCombatStateMachine : MonoBehaviour
 	private BattleCalculations battleCalculationsScript = new BattleCalculations ();
 	private BattleStateAddStatusEffects battleStateAddStatusEffectsScript = new BattleStateAddStatusEffects();
 	private BattleStateEnemyTurn battleStateEnemyTurnScript = new BattleStateEnemyTurn();
-	public static BattleFunctions battleFunctionsScript = new BattleFunctions();
-
+	
+	public BattleFunctions battleFunctionsScript;
 	public static BaseAbility playerUsedAbility;
 	public static BaseAbility enemyUsedAbility;
 	public static int statusEffectBaseDamage;
@@ -67,21 +67,25 @@ public class TurnBasedCombatStateMachine : MonoBehaviour
 			case (BattleStates.CALCULATE_DAMAGE):
 				if (currentTurnOwner == BattleStates.PLAYER_TURN) 
 				{
-					battleCalculationsScript.CalculateTotalPlayerDamage (playerUsedAbility);
-					battleCalculationsScript.GetEnergyCost (playerUsedAbility);
+					battleFunctionsScript.enemyCurrentHealth -= battleCalculationsScript.CalculateTotalPlayerDamage (playerUsedAbility);
+					battleFunctionsScript.playerCurrentEnergy -= battleCalculationsScript.GetEnergyCost (playerUsedAbility);
 					
 					if (battleFunctionsScript.enemyCurrentHealth <= 0)
 					{
 						currentState = BattleStates.WIN;
+						Debug.Log("Won the battle!");
+						break;
 					}
 				}
 				if (currentTurnOwner == BattleStates.ENEMY_TURN) 
 				{
-					battleCalculationsScript.CalculateTotalEnemyDamage (enemyUsedAbility);
+					battleFunctionsScript.playerCurrentHealth -= battleCalculationsScript.CalculateTotalEnemyDamage (enemyUsedAbility);
 
 					if (battleFunctionsScript.playerCurrentHealth <= 0)
 					{
 						currentState = BattleStates.LOSE;
+						Debug.Log("Lost the battle!");
+						break;
 					}
 				}
 				CheckTurnOwner ();	
@@ -92,7 +96,9 @@ public class TurnBasedCombatStateMachine : MonoBehaviour
 			case (BattleStates.END_TURN):
 				totalTurnCount++;
 				playerCompletedTurn = false;
-				enemyCompletedTurn = false; 
+				enemyCompletedTurn = false;
+
+				currentState = BattleStates.PLAYER_TURN; 
 				break;
 			case (BattleStates.LOSE):
 				break;
