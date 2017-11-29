@@ -175,6 +175,9 @@ public class CCFunctions : MonoBehaviour
 			GameInformation.Rhetoric = tempGladhander.Rhetoric;
 			GameInformation.Image = tempGladhander.Image;
 			GameInformation.Diplomacy = tempGladhander.Diplomacy;
+
+			GameInformation.PlayerMove1 = new AttackAbility ();
+			GameInformation.PlayerMove2 = new ToMyAide ();
 		} 
 		else if (!class1toggle.isOn && class2toggle.isOn && !class3toggle.isOn)
 		{
@@ -182,6 +185,9 @@ public class CCFunctions : MonoBehaviour
 			GameInformation.Rhetoric = tempChief.Rhetoric;
 			GameInformation.Image = tempChief.Image;
 			GameInformation.Diplomacy = tempChief.Diplomacy;
+
+			GameInformation.PlayerMove1 = new AttackAbility ();
+			GameInformation.PlayerMove2 = new BigStick ();
 		} 
 		else if (!class1toggle.isOn && !class2toggle.isOn && class3toggle.isOn)
 		{
@@ -189,6 +195,9 @@ public class CCFunctions : MonoBehaviour
 			GameInformation.Rhetoric = tempSophist.Rhetoric;
 			GameInformation.Image = tempSophist.Image;
 			GameInformation.Diplomacy = tempSophist.Diplomacy;
+
+			GameInformation.PlayerMove1 = new AttackAbility ();
+			GameInformation.PlayerMove2 = new Tirade ();
 		}
 
 		GameInformation.PlayerLevel = 1;

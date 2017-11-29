@@ -20,12 +20,16 @@ public class GameInformation : MonoBehaviour {
 
 	public static float PlayerHealth { get; set; }
 	public static float PlayerEnergy { get; set; }
-    public static float PlayerMaxHealth { get;set; }
-    public static float PlayerMaxEnergy { get;set; }
+    public static float PlayerMaxHealth { get; set; }
+    public static float PlayerMaxEnergy { get; set; }
 
-	public static BaseAbility PlayerMove1 = new AttackAbility();
-	public static BaseAbility PlayerMove2 = new ToMyAide();
-	public static BaseAbility PassiveAbility = new RazzleDazzle();
+	public static BaseAbility PlayerMove1 { get; set; }
+	public static BaseAbility PlayerMove2 { get; set; }
+	public static BaseAbility PassiveAbility { get; set; }
+
+//	public static BaseAbility PlayerMove1 = new AttackAbility();
+//	public static BaseAbility PlayerMove2 = new ToMyAide();
+//	public static BaseAbility PassiveAbility = new RazzleDazzle();
 
     void Awake()
     {
