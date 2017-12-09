@@ -30,5 +30,6 @@ public class SaveInformation
         Debug.Log(GameInformation.PlayerClass.CharacterClassName);
         Debug.Log(GameInformation.PlayerName);
         Debug.Log(GameInformation.Rhetoric);
+        Debug.Log(GameInformation.PassiveAbility);
     }
 }

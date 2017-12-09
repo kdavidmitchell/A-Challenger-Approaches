@@ -178,6 +178,7 @@ public class CCFunctions : MonoBehaviour
 
 			GameInformation.PlayerMove1 = new AttackAbility ();
 			GameInformation.PlayerMove2 = new ToMyAide ();
+			GameInformation.PassiveAbility = new RazzleDazzle();
 		} 
 		else if (!class1toggle.isOn && class2toggle.isOn && !class3toggle.isOn)
 		{
@@ -188,6 +189,7 @@ public class CCFunctions : MonoBehaviour
 
 			GameInformation.PlayerMove1 = new AttackAbility ();
 			GameInformation.PlayerMove2 = new BigStick ();
+			GameInformation.PassiveAbility = new GlowerOfHate();
 		} 
 		else if (!class1toggle.isOn && !class2toggle.isOn && class3toggle.isOn)
 		{
@@ -198,6 +200,7 @@ public class CCFunctions : MonoBehaviour
 
 			GameInformation.PlayerMove1 = new AttackAbility ();
 			GameInformation.PlayerMove2 = new Tirade ();
+			GameInformation.PassiveAbility = new QuestionableLogic();
 		}
 
 		GameInformation.PlayerLevel = 1;

@@ -9,7 +9,7 @@ public class BaseRandomEncounter
     private int experienceReward;
     private int moneyReward;
     private BaseItem itemReward;
-    private Skill passiveSkillToCheck;
+    private BaseAbility passiveSkillToCheck;
     private int skillTarget;
     private bool passedSkillCheck = false;
     private bool isComplete = false;
@@ -28,13 +28,13 @@ public class BaseRandomEncounter
     public int MoneyReward { get; set; }
     public BaseItem ItemReward { get; set; }
     public int SkillTarget { get; set; }
-    public Skill PassiveSkillToCheck { get; set; }
+    public BaseAbility PassiveSkillToCheck { get; set; }
     public bool PassedSkillCheck { get; set; }
     public bool IsComplete { get; set; }
 
     public void CheckSkill()
     {
-        if (PassiveSkillToCheck.SkillRank >= skillTarget)
+        if (PassiveSkillToCheck.AbilityRank >= SkillTarget)
         {
             PassedSkillCheck = true;
         }

@@ -55,8 +55,8 @@ public class CreateNewRandomEncounter : MonoBehaviour
         newOpportunity.ItemReward = new BaseFood();
         newOpportunity.MoneyReward = Random.Range(1, 11);
         newOpportunity.ExperienceReward = 10;
-        newOpportunity.PassiveSkillToCheck = passiveSkill;
-        Debug.Log("Player's passive skill: " + newOpportunity.PassiveSkillToCheck.SkillName);
+        //newOpportunity.PassiveSkillToCheck = passiveSkill;
+        //Debug.Log("Player's passive skill: " + newOpportunity.PassiveSkillToCheck.SkillName);
         newOpportunity.SkillTarget = 1;
         newOpportunity.OpportunityDescription = "A well-dressed young woman approaches you. She claims to be a representative of a nonprofit interested in backing your campaign. " +
             "Instead of offering scathing remarks about your political views on the sustainability of the rainforests, she invites you to join her and her peers at their headquarters in the Financial District.";
@@ -78,7 +78,7 @@ public class CreateNewRandomEncounter : MonoBehaviour
             Debug.Log(newOpportunity.IsComplete);
             newOpportunity.Reward();
         }
-        if (GUILayout.Button(newOpportunity.PassiveSkillToCheck.SkillName + " (" + newOpportunity.SkillTarget + ")"))
+//        if (GUILayout.Button(newOpportunity.PassiveSkillToCheck.SkillName + " (" + newOpportunity.SkillTarget + ")"))
         {
             newOpportunity.CheckSkill();
             Debug.Log("Skill checked");
