@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"trans",
+				"Transform.position"
+			],
+			[
 				"enemy",
 				"enemyCurrentEnergy"
 			],
@@ -155,9 +159,45 @@
 			"file": "A-Challenger-Approaches.sublime-project",
 			"settings":
 			{
-				"buffer_size": 122,
+				"buffer_size": 115,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Footprints.cs",
+			"settings":
+			{
+				"buffer_size": 515,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Demo/Scripts/LoadSceneOnClick.cs",
+			"settings":
+			{
+				"buffer_size": 379,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Demo/Scripts/MapFunctions.cs",
+			"settings":
+			{
+				"buffer_size": 427,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/Leveling System/Experience.cs",
+			"settings":
+			{
+				"buffer_size": 667,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
 			}
 		},
 		{
@@ -165,106 +205,6 @@
 			"settings":
 			{
 				"buffer_size": 3803,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Assets/Scripts/Battle Calculations/BattleCalculations.cs",
-			"settings":
-			{
-				"buffer_size": 1627,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Assets/Scripts/Abilities/AttackAbility.cs",
-			"settings":
-			{
-				"buffer_size": 381,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Assets/Scripts/Turn-based Combat/StatCalculations.cs",
-			"settings":
-			{
-				"buffer_size": 2072,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Assets/Scripts/Enemy/EnemyAbilityChoice.cs",
-			"settings":
-			{
-				"buffer_size": 248,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Assets/Scripts/Turn-based Combat/BattleStateStart.cs",
-			"settings":
-			{
-				"buffer_size": 2965,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Assets/Scripts/Game Information/GameInformation.cs",
-			"settings":
-			{
-				"buffer_size": 1225,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Assets/Demo/BattleFunctions.cs",
-			"settings":
-			{
-				"buffer_size": 3817,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Assets/Scripts/Turn-based Combat/BattleGUI.cs",
-			"settings":
-			{
-				"buffer_size": 2792,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Assets/Scripts/Save and Load/SaveInformation.cs",
-			"settings":
-			{
-				"buffer_size": 1254,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Assets/Demo/CCFunctions.cs",
-			"settings":
-			{
-				"buffer_size": 5252,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Assets/Scripts/Turn-based Combat/BattleStateAddStatusEffects.cs",
-			"settings":
-			{
-				"buffer_size": 952,
-				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
 		}
@@ -306,21 +246,31 @@
 	},
 	"expanded_folders":
 	[
+		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets",
+		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Demo",
+		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Demo/Scripts",
+		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Player",
 		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts",
-		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Abilities",
-		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Abilities/Gladhander",
-		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Abilities/Gladhander/Active",
-		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Battle Calculations",
-		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Character Classes",
-		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Character Creation GUI",
-		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Enemy",
+		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Leveling System",
 		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Turn-based Combat"
 	],
 	"file_history":
 	[
-		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Demo/LoadBattleScene.cs",
+		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Save and Load/SaveInformation.cs",
+		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Turn-based Combat/BattleGUI.cs",
+		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Game Information/GameInformation.cs",
 		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Demo/LoadSceneOnClick.cs",
+		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Demo/MapFunctions.cs",
+		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Turn-based Combat/BattleStateAddStatusEffects.cs",
 		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Demo/CCFunctions.cs",
+		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Demo/BattleFunctions.cs",
+		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Demo/LoadBattleScene.cs",
+		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Demo/LoadScene.cs",
+		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Turn-based Combat/BattleStateStart.cs",
+		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Enemy/EnemyAbilityChoice.cs",
+		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Turn-based Combat/StatCalculations.cs",
+		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Battle Calculations/BattleCalculations.cs",
+		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Turn-based Combat/TurnBasedCombatStateMachine.cs",
 		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Character Creation GUI/CreatePlayerGUI.cs",
 		"/C/Users/Kyle/Documents/GitHub/At-Wits-End/Assets/Scripts/GameManager.cs",
 		"/C/Users/Kyle/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
@@ -359,7 +309,7 @@
 	"groups":
 	[
 		{
-			"selected": 7,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -368,106 +318,20 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 122,
+						"buffer_size": 115,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								122,
-								122
+								40,
+								40
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "Assets/Scripts/Turn-based Combat/TurnBasedCombatStateMachine.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3803,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2521,
-								2521
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1142.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "Assets/Scripts/Battle Calculations/BattleCalculations.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1627,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1149,
-								1149
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "Assets/Scripts/Abilities/AttackAbility.cs",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 381,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
@@ -478,77 +342,76 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "Assets/Scripts/Turn-based Combat/StatCalculations.cs",
+					"buffer": 1,
+					"file": "Assets/Footprints.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2072,
+						"buffer_size": 515,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1632,
-								1632
+								364,
+								364
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 722.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Assets/Demo/Scripts/LoadSceneOnClick.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 379,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								229,
+								229
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "Assets/Scripts/Enemy/EnemyAbilityChoice.cs",
+					"buffer": 3,
+					"file": "Assets/Demo/Scripts/MapFunctions.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 248,
+						"buffer_size": 427,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								193,
-								193
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "Assets/Scripts/Turn-based Combat/BattleStateStart.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2965,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1937,
-								1937
+								421,
+								421
 							]
 						],
 						"settings":
@@ -557,114 +420,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 90.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "Assets/Scripts/Game Information/GameInformation.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1225,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1150,
-								1150
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "Assets/Demo/BattleFunctions.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3817,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2468,
-								2468
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 540.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
-					"file": "Assets/Scripts/Turn-based Combat/BattleGUI.cs",
+					"buffer": 4,
+					"file": "Assets/Scripts/Leveling System/Experience.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2792,
+						"buffer_size": 667,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								989,
-								989
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 360.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "Assets/Scripts/Save and Load/SaveInformation.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1254,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1245,
-								1245
+								381,
+								381
 							]
 						],
 						"settings":
@@ -677,24 +453,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
-					"file": "Assets/Demo/CCFunctions.cs",
-					"semi_transient": false,
+					"buffer": 5,
+					"file": "Assets/Scripts/Turn-based Combat/TurnBasedCombatStateMachine.cs",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 5252,
+						"buffer_size": 3803,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5244,
-								5244
+								3152,
+								3152
 							]
 						],
 						"settings":
@@ -703,39 +479,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2205.0,
+						"translation.y": 1305.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "Assets/Scripts/Turn-based Combat/BattleStateAddStatusEffects.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 952,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								158,
-								158
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -747,7 +494,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 35.0
 	},
 	"layout":
 	{

@@ -6,8 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Demo/DemoCC.unity
+    path: Assets/Demo/Scenes/DemoMM.unity
+    guid: 93b4d409213cb7840b87d9ee21836f89
+  - enabled: 1
+    path: Assets/Demo/Scenes/DemoCC.unity
     guid: d7c601cffff65e2418245bb91d655ae8
   - enabled: 1
-    path: Assets/Demo/DemoBattle.unity
+    path: Assets/Demo/Scenes/DemoMap.unity
+    guid: e9f9ec0c3daebf944aad71bdb2a0d29f
+  - enabled: 1
+    path: Assets/Demo/Scenes/DemoBattle.unity
     guid: 834e7ce0d30f2f941a82a7e34eacfbb4

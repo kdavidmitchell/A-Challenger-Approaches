@@ -12,6 +12,7 @@ public static class Experience
     {
         xpToGive = GameInformation.PlayerLevel * 10;
         GameInformation.CurrentXP += xpToGive;
+        CheckIfPlayerLeveled();
     }
 
     private static void CheckIfPlayerLeveled()
