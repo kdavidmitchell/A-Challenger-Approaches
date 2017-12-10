@@ -14,6 +14,6 @@ public class Tirade : BaseAbility
 		AbilityCost = 2;
 		AbilityType = AbilityTypes.ACTIVE;
 		AbilityRank = 1;
-		AbilityStatusEffect = new SleepStatusEffect ();
+		AbilityStatusEffect = new EmptyStatusEffect ();
 	}
 }

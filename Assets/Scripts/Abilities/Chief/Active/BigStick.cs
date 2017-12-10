@@ -14,6 +14,7 @@ public class BigStick : BaseAbility
 		AbilityCost = 1;
 		AbilityType = AbilityTypes.ACTIVE;
 		AbilityRank = 1;
+		AbilityStatusEffect = new EmptyStatusEffect ();
 	}
 
 }

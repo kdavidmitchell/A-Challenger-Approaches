@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TurnBasedCombatStateMachine : MonoBehaviour 
 {
@@ -101,6 +102,7 @@ public class TurnBasedCombatStateMachine : MonoBehaviour
 				currentState = BattleStates.PLAYER_TURN; 
 				break;
 			case (BattleStates.LOSE):
+				GameOver();
 				break;
 			case (BattleStates.WIN):
                 if (!hasAddedXP)
@@ -108,6 +110,8 @@ public class TurnBasedCombatStateMachine : MonoBehaviour
                     Experience.AddExperience();
                     hasAddedXP = true;
                 }
+
+                ReturnToMap();
 				break;
 		}	
 	}
@@ -135,6 +139,16 @@ public class TurnBasedCombatStateMachine : MonoBehaviour
 			//switch to end turn state
 			currentState = BattleStates.END_TURN;
 		}
+	}
+
+	private void ReturnToMap()
+	{
+		SceneManager.LoadScene(2);
+	}
+
+	private void GameOver()
+	{
+		SceneManager.LoadScene(4);
 	}
 
 }

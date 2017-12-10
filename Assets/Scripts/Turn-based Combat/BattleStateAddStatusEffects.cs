@@ -20,6 +20,17 @@ public class BattleStateAddStatusEffects
 				TurnBasedCombatStateMachine.currentState = TurnBasedCombatStateMachine.BattleStates.CALCULATE_DAMAGE;
 				
 				break;
+			case ("Empty"):
+				if (ApplyStatusEffect (usedAbility)) 
+				{
+					TurnBasedCombatStateMachine.statusEffectBaseDamage = usedAbility.AbilityStatusEffect.StatusEffectDamage;
+				} else 
+				{
+					TurnBasedCombatStateMachine.statusEffectBaseDamage = 0;
+				}
+				TurnBasedCombatStateMachine.currentState = TurnBasedCombatStateMachine.BattleStates.CALCULATE_DAMAGE;
+				
+				break;
 
 			default:
 				Debug.LogError ("error in status effects");

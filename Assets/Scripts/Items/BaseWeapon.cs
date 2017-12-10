@@ -19,4 +19,12 @@ public class BaseWeapon : BaseStatItem
     public WeaponTypes WeaponType { get; set; }
     public int ModifierID { get; set; }
 
+    public BaseWeapon()
+    {
+        ItemName = "Briefcase of the Sycophant";
+        ItemDescription = "A sad-looking briefcase belonging to a once-employed yuppie.";
+        ItemID = Random.Range(1, 101);
+        WeaponType = WeaponTypes.BRIEFCASE;
+    }
+
 }

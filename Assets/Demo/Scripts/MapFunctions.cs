@@ -28,6 +28,9 @@ public class MapFunctions : MonoBehaviour
 	//Opportunity information
 	private BaseOpportunity tempOpportunity = new BaseOpportunity();
 
+	//Challenge information
+	private BaseChallenge tempChallenge = new BaseChallenge();
+
 
 	// Use this for initialization
 	void Start () 
@@ -90,6 +93,14 @@ public class MapFunctions : MonoBehaviour
 		opportunitySkillCheckText.enabled = false;
 	}
 
+	private void DisableChallengeButtons()
+	{
+		challengeFightButton.enabled = false;
+		challengeFightText.enabled = false;
+		challengeSkillCheckButton.enabled = false;
+		challengeSkillCheckText.enabled = false;
+	}
+
 	public void InvokeWander()
 	{
 		Instantiate(footprints, player.transform.position, Quaternion.identity);
@@ -124,6 +135,23 @@ public class MapFunctions : MonoBehaviour
 	        opportunitySkillCheckText.text = tempOpportunity.PassiveSkillToCheck.AbilityName + " (" + tempOpportunity.SkillTarget + ")";
 
 	        EnableOpportunity();
+		} else 
+		{
+			tempChallenge.EncounterID = 1;
+        	tempChallenge.ItemReward = new BaseWeapon();
+	        tempChallenge.MoneyReward = Random.Range(1, 11);
+	        tempChallenge.ExperienceReward = 30;
+	        tempChallenge.PassiveSkillToCheck = GameInformation.PassiveAbility;
+	        Debug.Log("Player's passive skill: " + tempChallenge.PassiveSkillToCheck.AbilityName);
+	        tempChallenge.SkillTarget = 1;
+	        tempChallenge.ChallengeDescription = "A disgruntled looking man in a dirty suit swaggers in your direction, shouting something about cryptocurrency. " +
+	            "He swivels his unsettling gaze on you, and before you know it, he has his arms on your shoulders. You can smell the liquor on his breath.";
+	        tempChallenge.ChallengeSuccessDescription = "You quickly make short work of the man's lesser opinions, and, defeated, he shrugs and begins to terrorize someone else on the street.";
+
+	        challengeDescription.text = tempChallenge.ChallengeDescription;
+	        challengeSkillCheckText.text = tempChallenge.PassiveSkillToCheck.AbilityName + " (" + tempChallenge.SkillTarget + ")";
+
+	        EnableChallenge();
 		}
 	}
 
@@ -148,6 +176,19 @@ public class MapFunctions : MonoBehaviour
 		tempOpportunity.Reward();
 
 		opportunityDescription.text = tempOpportunity.OpportunitySuccessDescription + "\n\nYou are awarded " + tempOpportunity.ExperienceReward + " XP, " + tempOpportunity.ItemReward.ItemName + ", and " + tempOpportunity.MoneyReward + " dollars!";
+
+		Invoke("DisablePopups", 8f);
+	}
+
+	public void CompleteChallengeAndReward()
+	{
+		DisableChallengeButtons();
+
+		tempChallenge.CheckSkill();
+		tempChallenge.Complete();
+		tempChallenge.Reward();
+
+		challengeDescription.text = tempChallenge.ChallengeSuccessDescription + "\n\nYou are awarded " + tempChallenge.ExperienceReward + " XP, " + tempChallenge.ItemReward.ItemName + ", and " + tempChallenge.MoneyReward + " dollars!";
 
 		Invoke("DisablePopups", 8f);
 	}
