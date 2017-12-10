@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"WeaponT",
+				"WeaponType"
+			],
+			[
 				"Disa",
 				"DisableOpportunityButtons"
 			],
@@ -176,30 +180,12 @@
 	"buffers":
 	[
 		{
-			"file": "A-Challenger-Approaches.sublime-project",
-			"settings":
-			{
-				"buffer_size": 115,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "Assets/Demo/Scripts/CCFunctions.cs",
 			"settings":
 			{
 				"buffer_size": 5741,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Assets/Footprints.cs",
-			"settings":
-			{
-				"buffer_size": 515,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Unix"
 			}
 		},
 		{
@@ -215,16 +201,70 @@
 			"file": "Assets/Demo/Scripts/MapFunctions.cs",
 			"settings":
 			{
-				"buffer_size": 5272,
+				"buffer_size": 7154,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "Assets/Scripts/Abilities/Chief/Passive/GlowerOfHate.cs",
+			"file": "Assets/Scripts/Turn-based Combat/TurnBasedCombatStateMachine.cs",
 			"settings":
 			{
-				"buffer_size": 393,
+				"buffer_size": 4011,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Assets/Scripts/Abilities/Status Effects/StunStatusEffect.cs",
+			"settings":
+			{
+				"buffer_size": 248,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Assets/Scripts/Abilities/Status Effects/EmptyStatusEffect.cs",
+			"settings":
+			{
+				"buffer_size": 399,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/Abilities/Chief/Active/BigStick.cs",
+			"settings":
+			{
+				"buffer_size": 479,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Assets/Scripts/Abilities/Sophist/Active/Tirade.cs",
+			"settings":
+			{
+				"buffer_size": 492,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Assets/Scripts/Turn-based Combat/BattleStateAddStatusEffects.cs",
+			"settings":
+			{
+				"buffer_size": 1336,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Assets/Scripts/Items/BaseWeapon.cs",
+			"settings":
+			{
+				"buffer_size": 647,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Windows"
 			}
@@ -269,7 +309,7 @@
 			"file": "Assets/Random Encounter System/BaseChallenge.cs",
 			"settings":
 			{
-				"buffer_size": 245,
+				"buffer_size": 836,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Unix"
 			}
@@ -338,20 +378,28 @@
 		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts",
 		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Abilities",
 		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Abilities/Chief",
+		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Abilities/Chief/Active",
 		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Abilities/Chief/Passive",
 		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Abilities/Gladhander",
+		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Abilities/Gladhander/Active",
 		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Abilities/Gladhander/Passive",
 		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Abilities/Sophist",
+		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Abilities/Sophist/Active",
 		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Abilities/Sophist/Passive",
+		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Abilities/Status Effects",
 		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Character Classes",
 		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Character Creation",
 		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Game Information",
+		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Items",
 		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Leveling System",
 		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Save and Load",
 		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Turn-based Combat"
 	],
 	"file_history":
 	[
+		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Footprints.cs",
+		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Abilities/Chief/Passive/GlowerOfHate.cs",
+		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/A-Challenger-Approaches.sublime-project",
 		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Demo/Scripts/CCFunctions.cs",
 		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Save and Load/SaveInformation.cs",
 		"/C/Users/Kyle/Documents/GitHub/A-Challenger-Approaches/Assets/Scripts/Turn-based Combat/BattleGUI.cs",
@@ -406,40 +454,11 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 8,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "A-Challenger-Approaches.sublime-project",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 115,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								40,
-								40
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "Assets/Demo/Scripts/CCFunctions.cs",
 					"semi_transient": false,
 					"settings":
@@ -461,42 +480,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2250.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "Assets/Footprints.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 515,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								364,
-								364
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2240.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 1,
 					"file": "Assets/Demo/Scripts/LoadSceneOnClick.cs",
 					"semi_transient": false,
 					"settings":
@@ -520,24 +511,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 11,
+					"stack_index": 16,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 2,
 					"file": "Assets/Demo/Scripts/MapFunctions.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5272,
+						"buffer_size": 7154,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5263,
-								5263
+								5026,
+								5026
 							]
 						],
 						"settings":
@@ -545,28 +536,113 @@
 							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 2.0,
-						"translation.y": 1494.0,
+						"translation.x": 0.0,
+						"translation.y": 2154.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "Assets/Scripts/Abilities/Chief/Passive/GlowerOfHate.cs",
+					"buffer": 3,
+					"file": "Assets/Scripts/Turn-based Combat/TurnBasedCombatStateMachine.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 393,
+						"buffer_size": 4011,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								387,
-								387
+								3875,
+								3875
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 729.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Assets/Scripts/Abilities/Status Effects/StunStatusEffect.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 248,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								239,
+								239
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Assets/Scripts/Abilities/Status Effects/EmptyStatusEffect.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 399,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								393,
+								393
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "Assets/Scripts/Abilities/Chief/Active/BigStick.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 479,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								472,
+								472
 							]
 						],
 						"settings":
@@ -578,11 +654,99 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 7,
+					"file": "Assets/Scripts/Abilities/Sophist/Active/Tirade.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 492,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								470,
+								470
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "Assets/Scripts/Turn-based Combat/BattleStateAddStatusEffects.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1336,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								759,
+								759
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "Assets/Scripts/Items/BaseWeapon.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 647,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								637,
+								637
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Unity3D/UnityC#.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
 					"file": "Assets/Scripts/Game Information/GameInformation.cs",
 					"semi_transient": false,
 					"settings":
@@ -608,11 +772,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 11,
 					"file": "Assets/Scripts/Save and Load/SaveInformation.cs",
 					"semi_transient": false,
 					"settings":
@@ -638,11 +802,11 @@
 						"translation.y": 17.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 14,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 12,
 					"file": "Assets/Random Encounter System/BaseRandomEncounter.cs",
 					"semi_transient": false,
 					"settings":
@@ -665,14 +829,14 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 77.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 13,
 					"file": "Assets/Random Encounter System/CreateNewRandomEncounter.cs",
 					"semi_transient": false,
 					"settings":
@@ -695,27 +859,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 540.0,
+						"translation.y": 425.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 14,
 					"file": "Assets/Random Encounter System/BaseChallenge.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 245,
+						"buffer_size": 836,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								513,
+								513
 							]
 						],
 						"settings":
@@ -726,11 +890,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 15,
 					"file": "Assets/Random Encounter System/BaseOpportunity.cs",
 					"semi_transient": false,
 					"settings":
@@ -742,8 +906,8 @@
 						"selection":
 						[
 							[
-								729,
-								754
+								151,
+								1024
 							]
 						],
 						"settings":
@@ -756,11 +920,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 16,
 					"file": "Assets/Scripts/Leveling System/Experience.cs",
 					"semi_transient": false,
 					"settings":
@@ -786,7 +950,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 15,
 					"type": "text"
 				}
 			]

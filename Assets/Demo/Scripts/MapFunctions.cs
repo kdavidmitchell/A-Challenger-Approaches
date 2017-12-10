@@ -8,7 +8,9 @@ public class MapFunctions : MonoBehaviour
 
 	public Image player;
 	public GameObject footprints;
-	
+
+	//Opportunity information
+	private BaseOpportunity tempOpportunity = new BaseOpportunity();
 	public Image randomOpportunity;
 	public Text opportunityTitle;
 	public Text opportunityDescription;
@@ -17,6 +19,8 @@ public class MapFunctions : MonoBehaviour
 	public Image opportunitySkillCheckButton;
 	public Text opportunitySkillCheckText;
 
+	//Challenge information
+	private BaseChallenge tempChallenge;
 	public Image randomChallenge;
 	public Text challengeTitle;
 	public Text challengeDescription;
@@ -25,23 +29,34 @@ public class MapFunctions : MonoBehaviour
 	public Image challengeSkillCheckButton;
 	public Text challengeSkillCheckText;
 
-	//Opportunity information
-	private BaseOpportunity tempOpportunity = new BaseOpportunity();
-
-	//Challenge information
-	private BaseChallenge tempChallenge = new BaseChallenge();
-
+	//XP Bar information
+	public Image xpFill;
+	public Text xpValue;
 
 	// Use this for initialization
 	void Start () 
 	{
-		DisablePopups();	
+		if (!GameInformation.WonFight)
+		{
+			DisablePopups();
+		}
+		tempChallenge = new BaseChallenge();
+		GameInformation.WonFight = false;
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		
+		UpdateExperienceBar();
+	}
+
+	private void OnLevelWasLoaded()
+	{
+		if (GameInformation.WonFight)
+		{
+			tempChallenge = new BaseChallenge();
+			DisplayWonFightPopup();
+		}
 	}
 
 	private void DisablePopups()
@@ -137,17 +152,6 @@ public class MapFunctions : MonoBehaviour
 	        EnableOpportunity();
 		} else 
 		{
-			tempChallenge.EncounterID = 1;
-        	tempChallenge.ItemReward = new BaseWeapon();
-	        tempChallenge.MoneyReward = Random.Range(1, 11);
-	        tempChallenge.ExperienceReward = 30;
-	        tempChallenge.PassiveSkillToCheck = GameInformation.PassiveAbility;
-	        Debug.Log("Player's passive skill: " + tempChallenge.PassiveSkillToCheck.AbilityName);
-	        tempChallenge.SkillTarget = 1;
-	        tempChallenge.ChallengeDescription = "A disgruntled looking man in a dirty suit swaggers in your direction, shouting something about cryptocurrency. " +
-	            "He swivels his unsettling gaze on you, and before you know it, he has his arms on your shoulders. You can smell the liquor on his breath.";
-	        tempChallenge.ChallengeSuccessDescription = "You quickly make short work of the man's lesser opinions, and, defeated, he shrugs and begins to terrorize someone else on the street.";
-
 	        challengeDescription.text = tempChallenge.ChallengeDescription;
 	        challengeSkillCheckText.text = tempChallenge.PassiveSkillToCheck.AbilityName + " (" + tempChallenge.SkillTarget + ")";
 
@@ -164,7 +168,7 @@ public class MapFunctions : MonoBehaviour
 
 		opportunityDescription.text = tempOpportunity.InspectDescription + "\n\nYou are awarded " + tempOpportunity.ItemReward.ItemName + " and " + tempOpportunity.MoneyReward + " dollars!";
 
-		Invoke("DisablePopups", 8f);
+		Invoke("DisablePopups", 6f);
 	}
 
 	public void CompleteOpportunityAndReward()
@@ -176,8 +180,10 @@ public class MapFunctions : MonoBehaviour
 		tempOpportunity.Reward();
 
 		opportunityDescription.text = tempOpportunity.OpportunitySuccessDescription + "\n\nYou are awarded " + tempOpportunity.ExperienceReward + " XP, " + tempOpportunity.ItemReward.ItemName + ", and " + tempOpportunity.MoneyReward + " dollars!";
+		Experience.AddExperience();
+		UpdateExperienceBar();
 
-		Invoke("DisablePopups", 8f);
+		Invoke("DisablePopups", 6f);
 	}
 
 	public void CompleteChallengeAndReward()
@@ -189,7 +195,28 @@ public class MapFunctions : MonoBehaviour
 		tempChallenge.Reward();
 
 		challengeDescription.text = tempChallenge.ChallengeSuccessDescription + "\n\nYou are awarded " + tempChallenge.ExperienceReward + " XP, " + tempChallenge.ItemReward.ItemName + ", and " + tempChallenge.MoneyReward + " dollars!";
+		Experience.AddExperience();
+		UpdateExperienceBar();
 
-		Invoke("DisablePopups", 8f);
+		Invoke("DisablePopups", 6f);
+	}
+
+	private void DisplayWonFightPopup()
+	{
+		EnableChallenge();
+
+		challengeDescription.text = tempChallenge.ChallengeSuccessDescription + "\n\nYou are awarded " + tempChallenge.ExperienceReward + " XP, " + tempChallenge.ItemReward.ItemName + ", and " + tempChallenge.MoneyReward + " dollars!";
+		Experience.AddExperience();
+		UpdateExperienceBar();
+
+		DisableChallengeButtons();
+
+		Invoke("DisablePopups", 6f);
+	}
+
+	private void UpdateExperienceBar()
+	{
+		xpValue.text = "XP: " + GameInformation.CurrentXP + "/" + GameInformation.RequiredXP;
+		xpFill.fillAmount = GameInformation.CurrentXP / GameInformation.RequiredXP;
 	}
 }

@@ -205,6 +205,9 @@ public class CCFunctions : MonoBehaviour
 
 		GameInformation.PlayerLevel = 1;
 		GameInformation.PlayerName = inputField.text;
+		GameInformation.CurrentXP = 0;
+		GameInformation.RequiredXP = 100;
+		GameInformation.WonFight = false;
 		SaveInformation.SaveAllInformation();
 	}
 
