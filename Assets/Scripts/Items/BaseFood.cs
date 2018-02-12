@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BaseFood : BaseStatItem
+public class BaseFood : BaseItem
 {
 
 	public enum FoodTypes

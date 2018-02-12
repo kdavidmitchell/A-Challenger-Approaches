@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class BaseClothing : BaseStatItem
+public class BaseClothing : BaseItem
 {
 
 	public enum ClothingTypes

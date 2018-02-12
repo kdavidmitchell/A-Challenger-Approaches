@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BaseWeapon : BaseStatItem
+public class BaseWeapon : BaseItem
 {
 
 	public enum WeaponTypes
